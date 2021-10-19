@@ -7,7 +7,7 @@ $tipos = $_FILES['ficheros']['type'];
 $ubi_temporales = $_FILES['ficheros']['tmp_name'];
 $error = $_FILES['ficheros']['error'];
 $es_imagen = true;
-$tamaño_total = 0;
+$tamaño_total = 0; 
 
 foreach ($_FILES['ficheros'] as $clave => $valor) {
 print_r ($clave);
