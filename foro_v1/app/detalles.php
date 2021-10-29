@@ -2,7 +2,7 @@
 <b> Detalles:</b><br>
 <table>
 <tr><td>Longitud:           </td><td><?= strlen(strip_tags($_REQUEST['comentario'])) ?></td></tr>
-<tr><td>Nº de palabras:     </td><td><?= str_word_count(strip_tags($_REQUEST['comentario'])); ?></td></tr>
+<tr><td>Nº de palabras:     </td><td><?= str_word_count(strip_tags($_REQUEST['comentario']), 0, '@·[0-9]$ñ%&)("=?¿!¡'); ?></td></tr>
 <tr><td>Letra + repetida:   </td><td>
 
 <?php
@@ -37,7 +37,7 @@ echo $letraMasRep;
 <?php
 
     $cadena = strip_tags($_REQUEST['comentario']);
-    $arrayPalabras = str_word_count(strtolower($cadena), 1, '@·$%&)("=?¿!¡');
+    $arrayPalabras = str_word_count(strtolower($cadena), 1, '@·[0-9]$ñ%&)("=?¿!¡');
     $palabrasSinRep = array_unique($arrayPalabras);
     $maxP = 0;
     $contP = 0;
