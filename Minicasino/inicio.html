@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+</head>
+<body>
+    <h1>BIENVENIDO AL CASINO</h1>
+    <p>Esta es su <?php echo $_COOKIE['veces']; ?> ª visita.</p>
+    <form method="GET" action="casino.php">
+        <p>Introduzca el dinero con el que va a jugar: <input type="number" name="dineroInicial"></p>
+    </form>
+</body>
+</html>
