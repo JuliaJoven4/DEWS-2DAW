@@ -1,0 +1,37 @@
+Las mejoras que he hecho son todas las que pusiste, incluida la cookie que controlaba que solo se pudiera votar una vez
+cada película (lo que teníamos que hacer si no conseguíamos desplegar el proyecto), excepto la de incluir la valoración 
+de IMDB consultando los datos mediante su API gratuito.
+Tampoco he conseguido desplegar el proyecto, así que te mando el enlace a la página de mi GitHub en el que lo tengo
+subido.
+En cuanto a la funcionalidad del proyecto, he comprobado que todo funciona como corresponde, al menos en términos
+generales, pero me he dado cuenta de que a la hora de descargar como PDF los datos de las películas, hay algunas 
+imágenes que dan problemas y que no aparecen en la ficha descargada. No he conseguido averiguar por qué falla esto,
+pero si pruebas a descargar algunas de las primeras, por ejemplo, verás que sí funciona como debería.
+
+He añadido la opción de introducir el tráiler y el enlace a una plataforma de streaming tanto a la hora de añadir una
+nueva película como a la hora de modificarla, y he controlado que aparezca la celda con el tráiler solo si este se
+ha subido, al igual que he hecho con el enlace a la plataforma y el cartel de la película, para que no aparezca un
+campo vacío en el caso de que no se haya introducido nada en él. En el caso de la puntuación, si no ha votado nadie
+por una película, en lugar de hacer la cuenta de las votaciones y la media correspondiente, al ser 0, aparece un
+mensaje informando de que aún nadie ha votado la película seleccionada. Lo mismo ocurre con las imágenes a la hora
+de modificar un elemento. Si no hay imagen antigua, se informa de que aún no la hay, mientras que si existe, se 
+muestra al usuario para que sepa lo que está modificando.
+
+A la hora de contar los votos realizados a películas, los he contabilizado mediante una cookie, con independencia de
+quién sea el usuario que vota. Es decir, en general no se puede votar más de cinco veces en 24 horas.
+
+Con respecto al control de acceso, he realizado una distinción de dos tipos de usuarios en la base de datos mediante
+su rol: el administrador y el estándar. El primero tiene acceso a todas las funciones disponibles con las que 
+interactuar con las películas (ver su información, modificarlas, borrarlas, puntuarlas y añadir nuevas), mientras que
+el estándar solo puede ver la información y puntuarlas. Además, he creado un botón en el formulario de acceso, que
+es la primera página a la que se redirige al usuario al entrar a la aplicación, para entrar como invitado. Este tipo
+de usuario solo tendrá acceso a los detalles de las películas. Todos los usuarios, por otra parte, tendrán la
+posibilidad de descargar la lista de las películas en formato JSON y la información de cada una de ellas en formato
+PDF.
+
+Por último, en cuanto a la paginación, he optado por mostrar las películas disponibles de 10 en 10, dividiéndolas en 
+páginas que aparecen abajo del todo en la pantalla. He controlado que, si estoy en la primera o la última página, no 
+aparezcan las opciones de 'página anterior' y 'página siguiente' respectivamente.
+
+De las demás mejoras he hablado brevemente al principio, ya que no tenía mucho que explicar al respecto de las mismas,
+y todo esto es, en términos generales, lo que he mejorado desde la primera entrega del proyecto inicial.
